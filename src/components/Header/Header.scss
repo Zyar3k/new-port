@@ -18,13 +18,8 @@ header {
   left: 0;
 
   svg {
-    fill: $light-clr-text-opa;
     transition: $transition;
     height: 70px;
-
-    &:hover {
-      fill: $light-clr-text;
-    }
   }
 }
 

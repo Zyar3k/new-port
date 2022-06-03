@@ -1,17 +1,29 @@
+import { useEffect, useState, useContext } from "react";
 import HOOD from "../../assets/hood.png";
 import ThemeButton from "../ThemeButton/ThemeButton";
 import CTA from "./CTA";
-
-import "./Header.scss";
 import HeaderSocials from "./HeaderSocials";
+import { data } from "../../data/lang/data.js";
+
+import { AppContext } from "../../context/AppContext";
+import "./Header.scss";
 
 const Header = () => {
+  const { lang, switchLanguage } = useContext(AppContext);
+  const [content, setContent] = useState(data.pl.header);
+  useEffect(() => {
+    setContent(data[lang].header);
+  }, [lang, setContent]);
+
   return (
     <header>
       <div className="container header__container">
+        <button className="btn" onClick={switchLanguage}>
+          Switch
+        </button>
         <ThemeButton />
-        <h5>Cześć, nazywam się</h5>
-        <h1 className="title">Arek Zygan</h1>
+        <h5>{content.subtitle}</h5>
+        <h1 className="title">{content.title}</h1>
         <h5 className="text-light">Frontend Developer</h5>
         <div className="logo">
           <svg viewBox="0 0 356 74.1269508013157">
@@ -50,7 +62,7 @@ const Header = () => {
         </div>
 
         <a href="#contact" className="scroll__down">
-          Przewiń w dół
+          {/* {content.scrollDown} */}
         </a>
       </div>
     </header>

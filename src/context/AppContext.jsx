@@ -1,11 +1,36 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useReducer } from "react";
 
-export const AppContext = createContext({ theme: "light" });
+import appReducer, {
+  SWITCH_LANGUAGE,
+  SWITCH_THEME,
+} from "../reducers/AppReducers";
+const initialState = {
+  theme: "light",
+  lang: "pl",
+};
+
+export const AppContext = createContext(initialState);
 
 export const AppProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const [state, dispatch] = useReducer(appReducer, initialState);
+
+  const switchTheme = () => {
+    dispatch({ type: SWITCH_THEME });
+  };
+
+  const switchLanguage = () => {
+    dispatch({ type: SWITCH_LANGUAGE });
+  };
+
   return (
-    <AppContext.Provider value={{ theme, setTheme }}>
+    <AppContext.Provider
+      value={{
+        switchTheme,
+        switchLanguage,
+        theme: state.theme,
+        lang: state.lang,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

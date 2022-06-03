@@ -4,13 +4,13 @@ import { AppContext } from "../../context/AppContext";
 import "./ThemeButton.scss";
 
 const ThemeButton = () => {
-  const { theme, setTheme } = useContext(AppContext);
-  console.log(theme);
+  const { theme, switchTheme } = useContext(AppContext);
+
   return (
     <div className="toggle-wrapper">
       <div
         className={`${theme}` === "dark" ? "toggle active" : "toggle"}
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        onClick={switchTheme}
       >
         <i className="indicator" />
       </div>
