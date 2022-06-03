@@ -49,6 +49,18 @@ section > h5 {
 section > h2 {
   margin-bottom: 48px;
 }
+.btn {
+  width: max-content;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
 
 .light {
   .background {
@@ -116,16 +128,69 @@ section > h2 {
   }
 }
 
-.btn {
-  width: max-content;
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: $transition;
+.dark {
+  .background {
+    background: $dark-clr-bg;
 
-  &:hover {
-    border-color: transparent;
+    &.variant {
+      background: $dark-clr-bg-variant;
+    }
+  }
+  .text {
+    color: $dark-clr-text;
+
+    &.opa {
+      color: $dark-clr-text-opa;
+    }
+  }
+  .background_primary {
+    background: $dark-clr-primary;
+
+    &.variant {
+      background: $dark-clr-primary-variant;
+    }
+  }
+  .color_primary {
+    color: $dark-clr-primary;
+
+    &.-variant {
+      color: $dark-clr-primary-variant;
+    }
+  }
+
+  .btn {
+    color: $dark-clr-primary;
+    border: 1px solid $dark-clr-primary;
+
+    &:hover {
+      background: $dark-clr-text;
+      color: $dark-clr-bg;
+    }
+  }
+  .btn-primary {
+    background: $dark-clr-primary;
+    color: $dark-clr-bg;
+  }
+
+  a {
+    color: $dark-clr-primary;
+    transition: $transition;
+
+    &:hover {
+      color: $dark-clr-text;
+    }
+  }
+
+  section > h2,
+  section > h5 {
+    color: $dark-clr-text-opa;
+  }
+  section > h2 {
+    color: $dark-clr-primary;
+  }
+
+  .text-light {
+    color: $dark-clr-text-opa;
   }
 }
 

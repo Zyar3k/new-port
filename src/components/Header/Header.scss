@@ -92,6 +92,24 @@ header {
   }
 }
 
+.dark {
+  .logo {
+    svg {
+      fill: $dark-clr-text-opa;
+
+      &:hover {
+        fill: $dark-clr-text;
+      }
+    }
+  }
+  .header__socials::after {
+    background: $dark-clr-primary;
+  }
+  .me {
+    background: linear-gradient($dark-clr-primary, transparent);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .logo {
     svg {

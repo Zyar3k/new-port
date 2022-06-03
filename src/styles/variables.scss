@@ -9,6 +9,7 @@ $container-width-md: 86%;
 $container-width-sm: 90%;
 
 /* colors */
+// light theme
 $light-clr-bg: #c4ddff;
 $light-clr-bg-variant: #7fb5ff;
 
@@ -17,3 +18,12 @@ $light-clr-primary-variant: rgba($light-clr-primary, 0.4);
 
 $light-clr-text: rgb(0, 0, 0);
 $light-clr-text-opa: rgba($light-clr-text, 0.6);
+// dark theme
+$dark-clr-bg: #171717;
+$dark-clr-bg-variant: #2f2a2a;
+
+$dark-clr-primary: #da0037;
+$dark-clr-primary-variant: rgba($dark-clr-primary, 0.4);
+
+$dark-clr-text: rgb(255, 255, 255);
+$dark-clr-text-opa: rgba($dark-clr-text, 0.6);

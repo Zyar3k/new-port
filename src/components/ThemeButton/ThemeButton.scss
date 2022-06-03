@@ -1,0 +1,57 @@
+@import "../../styles/main.scss";
+
+.toggle-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle {
+  position: absolute;
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: $light-clr-bg-variant;
+  cursor: pointer;
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  transition: $transition;
+  z-index: 10;
+}
+
+.toggle.active {
+  background-color: #fff;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom, $light-clr-bg, $light-clr-bg-variant);
+  border-radius: 50%;
+  transform: scale(0.9);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2),
+    inset 0 4px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.8);
+  transition: $transition;
+}
+
+.toggle.active .indicator {
+  left: 30px;
+  background: linear-gradient(
+    to bottom,
+    $dark-clr-bg-variant,
+    $dark-clr-primary-variant
+  );
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0 4px 4px rgba(255, 255, 255, 1),
+    inset 0 -4px 4px rgba(255, 255, 255, 1);
+}

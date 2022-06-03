@@ -1,4 +1,5 @@
 import HOOD from "../../assets/hood.png";
+import ThemeButton from "../ThemeButton/ThemeButton";
 import CTA from "./CTA";
 
 import "./Header.scss";
@@ -8,6 +9,7 @@ const Header = () => {
   return (
     <header>
       <div className="container header__container">
+        <ThemeButton />
         <h5>Cześć, nazywam się</h5>
         <h1 className="title">Arek Zygan</h1>
         <h5 className="text-light">FrontendDeveloper</h5>

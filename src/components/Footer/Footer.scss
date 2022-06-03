@@ -74,6 +74,37 @@ footer {
     color: $light-clr-bg;
   }
 }
+.dark {
+  footer {
+    background: $dark-clr-primary;
+  }
+  footer a {
+    color: $dark-clr-bg;
+  }
+  .footer__logo {
+    svg {
+      fill: $dark-clr-bg;
+      &:hover {
+        fill: $dark-clr-text;
+      }
+    }
+  }
+
+  .footer__socials a {
+    background: $dark-clr-bg;
+    color: $dark-clr-text;
+
+    &:hover {
+      color: $dark-clr-bg;
+      border-color: $dark-clr-bg;
+      background: transparent;
+    }
+  }
+
+  .footer__copyright {
+    color: $light-clr-bg;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .footer__logo {

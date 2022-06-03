@@ -8,13 +8,16 @@ import Contact from "./components/Contact/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 import { AppContext } from "./context/AppContext";
+import ThemeButton from "./components/ThemeButton/ThemeButton.jsx";
 
 const App = () => {
   const { theme, setTheme } = useContext(AppContext);
+  console.log(theme);
   return (
     <>
       <div className={`${theme}`}>
         <div className="background text">
+          {/* <ThemeButton /> */}
           <Header />
           <Nav />
           <About />
