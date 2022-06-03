@@ -1,0 +1,57 @@
+@import "../../styles/main.scss";
+
+nav {
+  width: max-content;
+  display: block;
+  padding: 12px 28px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 32px;
+  display: flex;
+  gap: 14px;
+  border-radius: 48px;
+  backdrop-filter: blur(8px);
+
+  a {
+    background: transparent;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 18px;
+  }
+}
+
+.light {
+  nav {
+    background: rgba($light-clr-primary, 0.3);
+    a {
+      background: transparent;
+      color: $light-clr-text;
+      &:hover {
+        background: rgba($light-clr-primary, 0.4);
+      }
+      &.active {
+        background: $light-clr-primary;
+        color: $light-clr-bg;
+      }
+    }
+  }
+}
+.dark {
+  nav {
+    background: rgba($dark-clr-primary, 0.3);
+    a {
+      background: transparent;
+      color: $dark-clr-text;
+      &:hover {
+        background: rgba($dark-clr-primary, 0.4);
+      }
+      &.active {
+        background: $dark-clr-primary;
+        color: $dark-clr-bg;
+      }
+    }
+  }
+}

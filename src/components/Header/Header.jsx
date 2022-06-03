@@ -12,7 +12,7 @@ const Header = () => {
         <ThemeButton />
         <h5>Cześć, nazywam się</h5>
         <h1 className="title">Arek Zygan</h1>
-        <h5 className="text-light">FrontendDeveloper</h5>
+        <h5 className="text-light">Frontend Developer</h5>
         <div className="logo">
           <svg viewBox="0 0 356 74.1269508013157">
             <g transform="matrix(1.7915879487991333,0,0,1.7915879487991333,-19.056616978095036,-31.6677164252222)">
