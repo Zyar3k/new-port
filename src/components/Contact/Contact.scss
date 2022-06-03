@@ -1,0 +1,89 @@
+@import "../../styles/main.scss";
+
+.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact__option {
+  padding: 18px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: $transition;
+}
+
+.contact__option-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.contact__option a {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+  background: transparent;
+  resize: none;
+}
+
+.light {
+  .contact__option {
+    background: $light-clr-bg-variant;
+    &:hover {
+      background: transparent;
+      border-color: $light-clr-primary-variant;
+    }
+  }
+  input,
+  textarea {
+    border: 2px solid $light-clr-primary-variant;
+    color: $light-clr-text;
+  }
+}
+.dark {
+  .contact__option {
+    background: $dark-clr-bg-variant;
+    &:hover {
+      background: transparent;
+      border-color: $dark-clr-primary-variant;
+    }
+  }
+  input,
+  textarea {
+    border: 2px solid $dark-clr-primary-variant;
+    color: $dark-clr-text;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: $container-width-sm;
+  }
+}
