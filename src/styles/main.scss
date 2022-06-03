@@ -62,6 +62,20 @@ section > h5 {
       color: $light-clr-text-opa;
     }
   }
+  .background_primary {
+    background: $light-clr-primary;
+
+    &.variant {
+      background: $light-clr-primary-variant;
+    }
+  }
+  .color_primary {
+    color: $light-clr-primary;
+
+    &.-variant {
+      color: $light-clr-primary-variant;
+    }
+  }
 
   .btn {
     color: $light-clr-primary;
@@ -75,6 +89,15 @@ section > h5 {
   .btn-primary {
     background: $light-clr-primary;
     color: $light-clr-bg;
+  }
+
+  a {
+    color: $light-clr-primary;
+    transition: $transition;
+
+    &:hover {
+      color: $light-clr-text;
+    }
   }
 }
 

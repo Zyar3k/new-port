@@ -1,0 +1,92 @@
+@import "../../styles/main.scss";
+
+footer {
+  padding: 48px 0;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 120px;
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+  display: inline-block;
+
+  svg {
+    height: 100px;
+    transition: $transition;
+  }
+}
+
+.permalinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 auto 48px;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.footer__socials a {
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  border: 1px solid transparent;
+}
+
+.footer__copyright {
+  margin-bottom: 64px;
+}
+
+.light {
+  footer {
+    background: $light-clr-primary;
+  }
+  footer a {
+    color: $light-clr-bg;
+  }
+  .footer__logo {
+    svg {
+      fill: $light-clr-bg;
+      &:hover {
+        fill: $light-clr-text;
+      }
+    }
+  }
+
+  .footer__socials a {
+    background: $light-clr-bg;
+    color: $light-clr-text;
+
+    &:hover {
+      color: $light-clr-bg;
+      border-color: $light-clr-bg;
+      background: transparent;
+    }
+  }
+
+  .footer__copyright {
+    color: $light-clr-bg;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__logo {
+    svg {
+      height: 70px;
+    }
+  }
+}
+/* small */
+@media screen and (max-width: 600px) {
+  .footer__logo {
+    svg {
+      height: 60px;
+    }
+  }
+}
