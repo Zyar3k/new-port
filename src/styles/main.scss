@@ -46,3 +46,47 @@ section > h2,
 section > h5 {
   text-align: center;
 }
+
+.light {
+  .background {
+    background: $light-clr-bg;
+
+    &.variant {
+      background: $light-clr-bg-variant;
+    }
+  }
+  .text {
+    color: $light-clr-text;
+
+    &.opa {
+      color: $light-clr-text-opa;
+    }
+  }
+
+  .btn {
+    color: $light-clr-primary;
+    border: 1px solid $light-clr-primary;
+
+    &:hover {
+      background: $light-clr-text;
+      color: $light-clr-bg;
+    }
+  }
+  .btn-primary {
+    background: $light-clr-primary;
+    color: $light-clr-bg;
+  }
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
