@@ -1,0 +1,122 @@
+@import "../../styles/main.scss";
+
+header {
+  height: 100vh;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.header__container {
+  text-align: center;
+  position: relative;
+  padding-top: 70px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  svg {
+    fill: $light-clr-text-opa;
+    transition: $transition;
+    height: 70px;
+
+    &:hover {
+      fill: $light-clr-text;
+    }
+  }
+}
+
+.title {
+  font-family: $title-font;
+}
+.cta {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* socials */
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  gap: 14px;
+  left: 0;
+  bottom: 48px;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 32px;
+}
+
+.me {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 64px;
+  border-radius: 190px 190px 0 0;
+  overflow: hidden;
+  padding: 50px 18px 0 18px;
+}
+
+/* scroll */
+.scroll__down {
+  position: absolute;
+  right: -36px;
+  bottom: 80px;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.light {
+  .logo {
+    svg {
+      fill: $light-clr-text-opa;
+
+      &:hover {
+        fill: $light-clr-text;
+      }
+    }
+  }
+  .header__socials::after {
+    background: $light-clr-primary;
+  }
+  .me {
+    background: linear-gradient($light-clr-primary, transparent);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    svg {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+
+  .logo {
+    svg {
+      height: 34px;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .title {
+    margin: 16px 0;
+  }
+  .me {
+    width: 300px;
+  }
+}

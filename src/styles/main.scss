@@ -46,6 +46,9 @@ section > h2,
 section > h5 {
   text-align: center;
 }
+section > h2 {
+  margin-bottom: 48px;
+}
 
 .light {
   .background {
@@ -99,6 +102,18 @@ section > h5 {
       color: $light-clr-text;
     }
   }
+
+  section > h2,
+  section > h5 {
+    color: $light-clr-text-opa;
+  }
+  section > h2 {
+    color: $light-clr-primary;
+  }
+
+  .text-light {
+    color: $light-clr-text-opa;
+  }
 }
 
 .btn {
@@ -111,5 +126,18 @@ section > h5 {
 
   &:hover {
     border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: $container-width-md;
+  }
+}
+/* small */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: $container-width-sm;
   }
 }
