@@ -9,7 +9,7 @@ header {
 .header__container {
   text-align: center;
   position: relative;
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
 .logo {
@@ -46,29 +46,29 @@ header {
   position: absolute;
   gap: 14px;
   left: 0;
-  bottom: 48px;
+  bottom: 70px;
 }
 
 .header__socials::after {
   content: "";
   width: 1px;
-  height: 32px;
+  height: 40px;
 }
 
 .me {
   width: 350px;
   margin: 0 auto;
-  margin-top: 64px;
+  margin-top: 20px;
   border-radius: 190px 190px 0 0;
   overflow: hidden;
-  padding: 50px 18px 0 18px;
+  padding: 0 18px;
 }
 
 /* scroll */
 .scroll__down {
   position: absolute;
   right: -36px;
-  bottom: 80px;
+  bottom: 100px;
   transform: rotate(90deg);
   font-weight: 300;
   font-size: 14px;

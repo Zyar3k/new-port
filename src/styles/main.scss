@@ -46,9 +46,11 @@ section > h2,
 section > h5 {
   text-align: center;
 }
+
 section > h2 {
   margin-bottom: 48px;
 }
+
 .btn {
   width: max-content;
   display: inline-block;
@@ -60,6 +62,12 @@ section > h2 {
   &:hover {
     border-color: transparent;
   }
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .light {
