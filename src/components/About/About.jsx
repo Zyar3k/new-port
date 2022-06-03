@@ -7,8 +7,8 @@ import "./About.scss";
 const About = () => {
   return (
     <section id="about">
-      <h5>About</h5>
-      <h2>About</h2>
+      <h5>Dowiedz się więcej</h5>
+      <h2>O mnie</h2>
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
