@@ -1,3 +1,8 @@
+import { useEffect, useState, useContext } from "react";
+import pl from "../../data/lang/pl.json";
+import en from "../../data/lang/en.json";
+import { AppContext } from "../../context/AppContext";
+
 import IMG1 from "../../assets/bcd-2.jpg";
 import IMG2 from "../../assets/bid.png";
 import IMG3 from "../../assets/Numerologia.png";
@@ -86,10 +91,16 @@ const data = [
 ];
 
 const Portfolio = () => {
+  const { lang } = useContext(AppContext);
+  const [content, setContent] = useState(pl.portfolio);
+
+  useEffect(() => {
+    setContent(lang === "pl" ? pl.portfolio : en.portfolio);
+  }, [lang]);
   return (
     <section id="portfolio">
-      <h5>Wybrane projekty</h5>
-      <h2>Portfolio</h2>
+      <h5>{content.subtitle}</h5>
+      <h2>{content.title}</h2>
       <div className="container portfolio__container">
         {data.map(({ title, image, github, liveDemo, desc, tags }, index) => {
           return (

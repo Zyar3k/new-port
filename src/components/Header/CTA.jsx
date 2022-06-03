@@ -1,13 +1,15 @@
 import { useEffect, useState, useContext } from "react";
 import CV from "../../assets/Zygan Arkadiusz CV - PL.pdf";
-import { data } from "../../data/lang/data.js";
+import pl from "../../data/lang/pl.json";
+import en from "../../data/lang/en.json";
 import { AppContext } from "../../context/AppContext";
 
 const CTA = () => {
   const { lang } = useContext(AppContext);
-  const [content, setContent] = useState(data.pl.header);
+  const [content, setContent] = useState(pl.header);
+
   useEffect(() => {
-    setContent(data[lang].header);
+    setContent(lang === "pl" ? pl.header : en.header);
   }, [lang]);
   return (
     <div className="cta">

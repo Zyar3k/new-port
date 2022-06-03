@@ -10,16 +10,32 @@ nav {
   transform: translateX(-50%);
   bottom: 32px;
   display: flex;
-  gap: 14px;
+  gap: 12px;
   border-radius: 48px;
   backdrop-filter: blur(8px);
 
   a {
     background: transparent;
-    padding: 15px;
+    padding: 12px;
     border-radius: 50%;
     display: flex;
     font-size: 18px;
+  }
+
+  .language-switch {
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 15px;
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: $transition;
+    font-weight: bold;
+    background: rgba($light-clr-primary, 0.1);
+    border: 1px solid rgba($light-clr-primary, 0.5);
   }
 }
 
@@ -37,6 +53,11 @@ nav {
         color: $light-clr-bg;
       }
     }
+    .language-switch {
+      &:hover {
+        background: rgba($light-clr-primary, 0.4);
+      }
+    }
   }
 }
 .dark {
@@ -51,6 +72,11 @@ nav {
       &.active {
         background: $dark-clr-primary;
         color: $dark-clr-bg;
+      }
+    }
+    .language-switch {
+      &:hover {
+        background: rgba($dark-clr-primary, 0.4);
       }
     }
   }

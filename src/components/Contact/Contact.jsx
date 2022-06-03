@@ -1,12 +1,21 @@
-import { useRef } from "react";
+import { useEffect, useState, useContext, useRef } from "react";
 import emailjs from "emailjs-com";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
+import pl from "../../data/lang/pl.json";
+import en from "../../data/lang/en.json";
+import { AppContext } from "../../context/AppContext";
 
 import "./Contact.scss";
 
 const Contact = () => {
   const form = useRef();
+  const { lang } = useContext(AppContext);
+  const [content, setContent] = useState(pl.contact);
+
+  useEffect(() => {
+    setContent(lang === "pl" ? pl.contact : en.contact);
+  }, [lang]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,8 +40,8 @@ const Contact = () => {
   };
   return (
     <section id="contact">
-      <h5>Skontaktuj się ze mną</h5>
-      <h2>Kontakt do mnie</h2>
+      <h5>{content.subtitle}</h5>
+      <h2>{content.title}</h2>
 
       <div className="container contact__container">
         <div className="contact__options">
@@ -41,7 +50,7 @@ const Contact = () => {
             <h4>Email</h4>
             <h5>a.zygan@gmail.com</h5>
             <a href="mailto:a.zygan@gmail.com" target="_blank" rel="noreferrer">
-              Wyślij wiadomość
+              {content.sendMessage}
             </a>
           </article>
           <article className="contact__option">
@@ -53,22 +62,27 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Wyślij wiadomość
+              {content.sendMessage}
             </a>
           </article>
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Twoje imię" required />
-          <input type="text" name="email" placeholder="Twój Email" required />
+          <input type="text" name="name" placeholder={content.fName} required />
+          <input
+            type="text"
+            name="email"
+            placeholder={content.fMail}
+            required
+          />
           <textarea
             name="message"
             rows="7"
-            placeholder="Twoja wiadomość"
+            placeholder={content.fMessage}
             required
           ></textarea>
           <button className="btn btn-primary" type="submit">
-            Wyślij wiadomość
+            {content.sendMessage}
           </button>
         </form>
       </div>

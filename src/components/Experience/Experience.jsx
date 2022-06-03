@@ -1,4 +1,9 @@
+import { useEffect, useState, useContext } from "react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import pl from "../../data/lang/pl.json";
+import en from "../../data/lang/en.json";
+import { AppContext } from "../../context/AppContext";
+
 import "./Experience.scss";
 
 const frontData = [
@@ -25,10 +30,16 @@ const backData = [
 ];
 
 const Experience = () => {
+  const { lang } = useContext(AppContext);
+  const [content, setContent] = useState(pl.experience);
+
+  useEffect(() => {
+    setContent(lang === "pl" ? pl.experience : en.experience);
+  }, [lang]);
   return (
     <section id="experience">
-      <h5>Doświadczenie w pracy</h5>
-      <h2>Moje umiejętności</h2>
+      <h5>{content.subtitle}</h5>
+      <h2>{content.title}</h2>
       <div className="container experience__container">
         <div className="experience__frontend">
           <h3>Frontend Development</h3>

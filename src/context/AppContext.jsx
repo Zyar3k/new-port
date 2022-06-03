@@ -1,5 +1,5 @@
-import { createContext, useState, useReducer } from "react";
-
+import { createContext, useState, useReducer, useEffect } from "react";
+// import { data } from "../data/lang/data.js";
 import appReducer, {
   SWITCH_LANGUAGE,
   SWITCH_THEME,
@@ -29,6 +29,7 @@ export const AppProvider = ({ children }) => {
         switchLanguage,
         theme: state.theme,
         lang: state.lang,
+        data: state.data,
       }}
     >
       {children}

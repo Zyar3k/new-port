@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { MdOutlineWidgets } from "react-icons/md";
 
+import { AppContext } from "../../context/AppContext";
 import "./Nav.scss";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
+
+  const { lang, switchLanguage } = useContext(AppContext);
 
   return (
     <nav>
@@ -45,6 +48,9 @@ const Nav = () => {
       >
         <BiMessageSquareDetail />
       </a>
+      <div className="language-switch" onClick={switchLanguage}>
+        {lang === "pl" ? "EN" : "PL"}
+      </div>
     </nav>
   );
 };

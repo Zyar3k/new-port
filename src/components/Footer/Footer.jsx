@@ -1,10 +1,20 @@
+import { useEffect, useState, useContext } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoTwitter } from "react-icons/io";
+import pl from "../../data/lang/pl.json";
+import en from "../../data/lang/en.json";
+import { AppContext } from "../../context/AppContext";
 
 import "./Footer.scss";
 
 const Footer = () => {
+  const { lang } = useContext(AppContext);
+  const [content, setContent] = useState(pl.footer);
+
+  useEffect(() => {
+    setContent(lang === "pl" ? pl.footer : en.footer);
+  }, [lang]);
   return (
     <footer>
       <a href="#" className="footer__logo">
@@ -41,19 +51,19 @@ const Footer = () => {
       </a>
       <ul className="permalinks">
         <li>
-          <a href="#">Home</a>
+          <a href="#">{content.home}</a>
         </li>
         <li>
-          <a href="#about">O mnie</a>
+          <a href="#about">{content.about}</a>
         </li>
         <li>
-          <a href="#experience">Doświadczenie</a>
+          <a href="#experience">{content.experience}</a>
         </li>
         <li>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">{content.portfolio}</a>
         </li>
         <li>
-          <a href="#contact">Kontakt</a>
+          <a href="#contact">{content.contact}</a>
         </li>
       </ul>
 
