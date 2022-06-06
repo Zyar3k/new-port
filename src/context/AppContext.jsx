@@ -1,4 +1,4 @@
-import { createContext, useState, useReducer, useEffect } from "react";
+import { createContext, useReducer } from "react";
 // import { data } from "../data/lang/data.js";
 import appReducer, {
   SWITCH_LANGUAGE,

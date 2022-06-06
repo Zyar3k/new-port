@@ -34,8 +34,8 @@ nav {
     cursor: pointer;
     transition: $transition;
     font-weight: bold;
-    background: rgba($light-clr-primary, 0.1);
-    border: 1px solid rgba($light-clr-primary, 0.5);
+    background: rgba($light-clr-bg, 0.5);
+    border: 1px solid rgba($light-clr-bg, 0.5);
   }
 }
 

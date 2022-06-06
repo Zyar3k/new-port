@@ -3,31 +3,9 @@ import { BsPatchCheckFill } from "react-icons/bs";
 import pl from "../../data/lang/pl.json";
 import en from "../../data/lang/en.json";
 import { AppContext } from "../../context/AppContext";
+import { backData, frontData } from "../../data/experience/data";
 
 import "./Experience.scss";
-
-const frontData = [
-  "HTML",
-  "CSS",
-  "Sass",
-  "Tailwind",
-  "Styled-components",
-  "Bootstrap",
-  "Javascript",
-  "Typescript",
-  "React",
-  "Vue",
-];
-
-const backData = [
-  "Node JS",
-  "MongoDB",
-  "Express.js",
-  "JWT",
-  "Socket.io",
-  "Postman",
-  "Git",
-];
 
 const Experience = () => {
   const { lang } = useContext(AppContext);
