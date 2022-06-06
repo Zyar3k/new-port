@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Zyar3k/new-port/static/css/main.d4b90f97.css",
-    "main.js": "/Zyar3k/new-port/static/js/main.87caa39c.js",
-    "static/media/Picture_shop.png": "/Zyar3k/new-port/static/media/Picture_shop.c7989b2de9310fd0967b.png",
-    "static/media/Numerologia.png": "/Zyar3k/new-port/static/media/Numerologia.8552b7d2056df75b51c6.png",
-    "static/media/bcd-2.jpg": "/Zyar3k/new-port/static/media/bcd-2.baf96606f2f2bdba748e.jpg",
-    "static/media/bcd.png": "/Zyar3k/new-port/static/media/bcd.0273e508b7219d1c8fc8.png",
-    "static/media/top-books.jpg": "/Zyar3k/new-port/static/media/top-books.1453f3a7e11ea4ce6de8.jpg",
-    "static/media/m2r.png": "/Zyar3k/new-port/static/media/m2r.0831f31ebc00e5831154.png",
-    "static/media/bid.png": "/Zyar3k/new-port/static/media/bid.aed728185ebd00f2ac05.png",
-    "static/media/czatap_port.png": "/Zyar3k/new-port/static/media/czatap_port.778ddc9f2f88e65b637f.png",
-    "static/media/Zygan Arkadiusz CV - PL.pdf": "/Zyar3k/new-port/static/media/Zygan Arkadiusz CV - PL.dea1b1a3520ebb4f938f.pdf",
-    "static/media/do-zrobienia.png": "/Zyar3k/new-port/static/media/do-zrobienia.f84423aade7cb9742bbb.png",
-    "static/media/hood.png": "/Zyar3k/new-port/static/media/hood.1d09db5410da412bfe70.png",
-    "static/media/me-about.jpg": "/Zyar3k/new-port/static/media/me-about.ea10a0e36e8003848d4a.jpg",
-    "index.html": "/Zyar3k/new-port/index.html",
-    "main.d4b90f97.css.map": "/Zyar3k/new-port/static/css/main.d4b90f97.css.map",
-    "main.87caa39c.js.map": "/Zyar3k/new-port/static/js/main.87caa39c.js.map"
+    "main.css": "/new-port/static/css/main.d4b90f97.css",
+    "main.js": "/new-port/static/js/main.b8fab5de.js",
+    "static/media/Picture_shop.png": "/new-port/static/media/Picture_shop.c7989b2de9310fd0967b.png",
+    "static/media/Numerologia.png": "/new-port/static/media/Numerologia.8552b7d2056df75b51c6.png",
+    "static/media/bcd-2.jpg": "/new-port/static/media/bcd-2.baf96606f2f2bdba748e.jpg",
+    "static/media/bcd.png": "/new-port/static/media/bcd.0273e508b7219d1c8fc8.png",
+    "static/media/top-books.jpg": "/new-port/static/media/top-books.1453f3a7e11ea4ce6de8.jpg",
+    "static/media/m2r.png": "/new-port/static/media/m2r.0831f31ebc00e5831154.png",
+    "static/media/bid.png": "/new-port/static/media/bid.aed728185ebd00f2ac05.png",
+    "static/media/czatap_port.png": "/new-port/static/media/czatap_port.778ddc9f2f88e65b637f.png",
+    "static/media/Zygan Arkadiusz CV - PL.pdf": "/new-port/static/media/Zygan Arkadiusz CV - PL.dea1b1a3520ebb4f938f.pdf",
+    "static/media/do-zrobienia.png": "/new-port/static/media/do-zrobienia.f84423aade7cb9742bbb.png",
+    "static/media/hood.png": "/new-port/static/media/hood.1d09db5410da412bfe70.png",
+    "static/media/me-about.jpg": "/new-port/static/media/me-about.ea10a0e36e8003848d4a.jpg",
+    "index.html": "/new-port/index.html",
+    "main.d4b90f97.css.map": "/new-port/static/css/main.d4b90f97.css.map",
+    "main.b8fab5de.js.map": "/new-port/static/js/main.b8fab5de.js.map"
   },
   "entrypoints": [
     "static/css/main.d4b90f97.css",
-    "static/js/main.87caa39c.js"
+    "static/js/main.b8fab5de.js"
   ]
 }
