@@ -1,8 +1,8 @@
 {
-  "name": "new-port",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zyar3k.github.io/new-port/",
+  "homepage": "https://zyar3k.github.io/portfolio/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
