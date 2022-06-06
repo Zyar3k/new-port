@@ -9,6 +9,7 @@ import "./Portfolio.scss";
 const Portfolio = () => {
   const { lang } = useContext(AppContext);
   const [content, setContent] = useState(pl.portfolio);
+  // eslint-disable-next-line
   const [data, setData] = useState(projects);
 
   useEffect(() => {

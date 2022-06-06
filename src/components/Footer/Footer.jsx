@@ -17,6 +17,7 @@ const Footer = () => {
   }, [lang]);
   return (
     <footer>
+      {/* eslint-disable-next-line */}
       <a href="#" className="footer__logo">
         <div>
           <svg viewBox="0 0 356 74.1269508013157">
@@ -51,6 +52,7 @@ const Footer = () => {
       </a>
       <ul className="permalinks">
         <li>
+          {/* eslint-disable-next-line */}
           <a href="#">{content.home}</a>
         </li>
         <li>
@@ -68,13 +70,21 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://facebook.com">
+        <a
+          href="https://www.facebook.com/arkadiusz.zygan/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaFacebookF />
         </a>
-        <a href="https://instagram.com">
+        <a
+          href="https://www.instagram.com/zyar3k/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FiInstagram />
         </a>
-        <a href="https://twitter.com">
+        <a href="https://twitter.com/zyar3k" target="_blank" rel="noreferrer">
           <IoLogoTwitter />
         </a>
       </div>
